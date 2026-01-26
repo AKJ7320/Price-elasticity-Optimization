@@ -14,6 +14,10 @@ Install dependencies with `python -m pip install -r requirements.txt`.
 
 Run `python src/generate_synthetic_data.py` to generate 10,800 SKUs across 26 synthetic weeks from 2025-06-30 to 2025-12-22. The final week ends 2025-12-28. Numeric week indices remain the seasonal model input. Previews are available in `data/sample/`; full generated CSVs under `data/raw/` are ignored by Git.
 
+## Elasticity estimation
+
+`src/mllib.py` supplies NumPy regression primitives; `src/elasticity_model.py` implements category pooling and SKU shrinkage. After generating data, run `python src/elasticity_model.py` to evaluate parameter recovery against separate synthetic ground truth. This is not a future-period forecast test.
+
 # Author
 
 Adveidh Krishna
