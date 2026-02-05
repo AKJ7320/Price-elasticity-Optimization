@@ -18,6 +18,10 @@ Run `python src/generate_synthetic_data.py` to generate 10,800 SKUs across 26 sy
 
 `src/mllib.py` supplies NumPy regression primitives; `src/elasticity_model.py` implements category pooling and SKU shrinkage. After generating data, run `python src/elasticity_model.py` to evaluate parameter recovery against separate synthetic ground truth. This is not a future-period forecast test.
 
+## 2026 optimization scenarios
+
+Run `python src/train.py` after data generation to evaluate elasticity estimates and produce bounded (±12%) pricing scenarios. Metrics and per-SKU results are written under `reports/`; figures are generated under `screenshots/`. Run `python src/business_impact.py` for the annual estimate based on explicit illustrative assumptions. These are scenarios, not observed outcomes. Run `python -m pytest tests/` for optimizer checks.
+
 # Author
 
 Adveidh Krishna
