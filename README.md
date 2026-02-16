@@ -22,6 +22,18 @@ Run `python src/generate_synthetic_data.py` to generate 10,800 SKUs across 26 sy
 
 Run `python src/train.py` after data generation to evaluate elasticity estimates and produce bounded (±12%) pricing scenarios. Metrics and per-SKU results are written under `reports/`; figures are generated under `screenshots/`. Run `python src/business_impact.py` for the annual estimate based on explicit illustrative assumptions. These are scenarios, not observed outcomes. Run `python -m pytest tests/` for optimizer checks.
 
+## Evaluation figures
+
+![demand profit curve sample sku](screenshots/demand_profit_curve_sample_sku.png)
+
+![elasticity accuracy](screenshots/elasticity_accuracy.png)
+
+![elasticity by category](screenshots/elasticity_by_category.png)
+
+![margin lift distribution](screenshots/margin_lift_distribution.png)
+
+Run `python -m pytest tests/` for calendar, pipeline, report and optimizer checks.
+
 # Author
 
 Adveidh Krishna
